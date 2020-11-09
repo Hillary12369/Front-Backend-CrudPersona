@@ -1,0 +1,50 @@
+<div class="center">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Registrar</mat-card-title>
+          <mat-card-subtitle>Personas</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput [(ngModel)]="personaModel.NOMBRE_PERSONA" placeholder="Ingresar Nombre" name="nombre_persona">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Apellido Paterno</mat-label>
+                <input matInput [(ngModel)]="personaModel.APELL_PAT" placeholder="Ingresar Apellido Pat" name="apellido_paterno">                
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Apellido Materno</mat-label>
+                <input matInput [(ngModel)]="personaModel.APELL_MAT" placeholder="Ingresar Apellido Mat" name="apellido_materno">           
+             </mat-form-field>
+             <mat-form-field appearance="outline">
+                <mat-label>DNI</mat-label>
+                <input matInput [(ngModel)]="personaModel.DNI" placeholder="Ingresar DNI" name="dni">            
+             </mat-form-field>
+             <mat-form-field appearance="outline">
+                <mat-label>Correo</mat-label>
+                <input matInput [(ngModel)]="personaModel.CORREO" placeholder="Ingresar correo" name="correo">             
+            </mat-form-field>
+             <mat-form-field appearance="outline">
+                <mat-label>Telefono</mat-label>
+                <input matInput [(ngModel)]="personaModel.TELEFONO" placeholder="Ingresar telefono" name="telefono">            
+             </mat-form-field>
+             <mat-form-field appearance="outline">
+                <mat-label>Fecha Nacimiento</mat-label>
+                <input matInput [(ngModel)]="personaModel.FECHA_NAC" placeholder="Ingresar fecha nacimiento" name="fecha_nacimiento">             </mat-form-field>
+             <mat-form-field appearance="outline">
+                <mat-label>Sexo</mat-label>
+                <input matInput [(ngModel)]="personaModel.SEXO" placeholder="Ingresar sexo" name="sexo">            
+             </mat-form-field>
+            <section>
+                <div class="example-button-row">
+                    <button mat-raised-button color="primary" (click)="create()">Registrar</button>
+                    <a mat-raised-button routerLink="/listar" color="warn">Cancelar</a>
+                </div>
+            </section>
+        </mat-card-content>
+      </mat-card>
+
+    <!---->
+</div>

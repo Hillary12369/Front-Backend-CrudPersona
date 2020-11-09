@@ -1,0 +1,63 @@
+<div class="center">
+  <button mat-icon-button>    
+    <a mat-icon-button routerLink="/add/persona">
+      <mat-icon  class="add" color="accent">add_circle</mat-icon>
+    </a>
+  </button>
+</div>
+<nav class="center">
+  <table mat-table [dataSource]="persona" class="mat-elevation-z8">
+    <ng-container matColumnDef="ID_PERSONA">
+      <th mat-header-cell *matHeaderCellDef>ID PERSONA</th>
+      <td mat-cell *matCellDef="let persona"> {{persona.ID_PERSONA}} </td>
+    </ng-container>
+    <ng-container matColumnDef="NOMBRE_PERSONA">
+      <th mat-header-cell *matHeaderCellDef>NOMBRE PERSONA</th>
+      <td mat-cell *matCellDef="let persona"> {{persona.NOMBRE_PERSONA}} </td>
+    </ng-container>
+    <ng-container matColumnDef="APELL_PAT">
+      <th mat-header-cell *matHeaderCellDef>APELL PAT</th>
+      <td mat-cell *matCellDef="let persona"> {{persona.APELL_PAT}} </td>
+    </ng-container>
+    <ng-container matColumnDef="APELL_MAT">
+        <th mat-header-cell *matHeaderCellDef>APELL MAT</th>
+        <td mat-cell *matCellDef="let persona"> {{persona.APELL_MAT}} </td>
+     </ng-container>
+    <ng-container matColumnDef="DNI">
+        <th mat-header-cell *matHeaderCellDef>DNI</th>
+        <td mat-cell *matCellDef="let persona"> {{persona.DNI}} </td>
+    </ng-container>
+    <ng-container matColumnDef="CORREO">
+        <th mat-header-cell *matHeaderCellDef>CORREO</th>
+        <td mat-cell *matCellDef="let persona"> {{persona.CORREO}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TELEFONO">
+        <th mat-header-cell *matHeaderCellDef>TLF</th>
+        <td mat-cell *matCellDef="let persona"> {{persona.TELEFONO}} </td>
+      </ng-container>
+      <ng-container matColumnDef="FECHA_NAC">
+        <th mat-header-cell *matHeaderCellDef>FECHA NACIMIIENTO</th>
+        <td mat-cell *matCellDef="let persona"> {{persona.FECHA_NAC}} </td>
+      </ng-container>
+      <ng-container matColumnDef="SEXO">
+        <th mat-header-cell *matHeaderCellDef>SEXO</th>
+        <td mat-cell *matCellDef="let persona"> {{persona.SEXO}} </td>
+      </ng-container>
+    <ng-container matColumnDef="EDITAR">
+      <th mat-header-cell *matHeaderCellDef>EDITAR</th>
+      <td mat-cell *matCellDef="let persona">
+        <a mat-icon-button  ></a>
+        <mat-icon color="primary">edit</mat-icon>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="ELIMINAR">
+      <th mat-header-cell *matHeaderCellDef>ELIMINAR</th>
+      <td mat-cell *matCellDef="let persona"> 
+        <button  mat-icon-button >
+        <mat-icon color="warn">delete</mat-icon>
+      </button></td>
+    </ng-container>
+      <tr mat-header-row *matHeaderRowDef="['ID_PERSONA', 'NOMBRE_PERSONA', 'APELL_PAT', 'APELL_MAT', 'DNI', 'CORREO', 'TELEFONO', 'FECHA_NAC', 'SEXO','EDITAR', 'ELIMINAR']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['ID_PERSONA', 'NOMBRE_PERSONA', 'APELL_PAT', 'APELL_MAT', 'DNI', 'CORREO', 'TELEFONO', 'FECHA_NAC', 'SEXO','EDITAR', 'ELIMINAR']"></tr>
+  </table>
+</nav>
