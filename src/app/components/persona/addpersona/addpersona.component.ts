@@ -16,10 +16,11 @@ export class AddpersonaComponent implements OnInit {
   
   ngOnInit():void{}
   public create(): void {
+    console.log(this.personaModel)
     this.personaService.addPersona(this.personaModel).subscribe(
       reponse=>{
         this.router.navigate(['/listar'])
-        Swal.fire('Nueva Persona', `Persona ${this.personaModel.NOMBRE_PERSONA, this.personaModel.APELL_PAT, this.personaModel.APELL_MAT, this.personaModel.DNI, this.personaModel.CORREO, this.personaModel.TELEFONO, this.personaModel.FECHA_NAC, this.personaModel.SEXO} 'creado con exito`,'success');
+        Swal.fire('Nueva Persona', `Persona ${this.personaModel.nombre_persona,this.personaModel.apell_pat, this.personaModel.apell_mat} 'creado con exito`,'success');
       })
   }
 }

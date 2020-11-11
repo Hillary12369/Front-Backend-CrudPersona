@@ -9,7 +9,7 @@ import { AddpersonaComponent } from './components/persona/addpersona/addpersona.
 const routes: Routes = [
   {path: 'listar', component: ListarpersonaComponent},
   {path: 'add/persona', component:AddpersonaComponent},
-  {path: 'editar/:id', component:UpdatepersonaComponent}
+  {path: 'editpersona/:id', component:UpdatepersonaComponent}
 ];
 
 @NgModule({

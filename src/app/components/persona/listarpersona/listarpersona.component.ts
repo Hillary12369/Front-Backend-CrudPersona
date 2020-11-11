@@ -14,10 +14,9 @@ export class ListarpersonaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.personaService.getPersona().subscribe(
+    this.personaService.getPersonas().subscribe(
       (data)=>{
         this.persona = data['cursor_persona'];
-        alert(this.persona);
       }
     )
   }

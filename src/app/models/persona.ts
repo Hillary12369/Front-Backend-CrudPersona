@@ -1,12 +1,11 @@
 export class Persona {
-    ID_PERSONA: number;
-    NOMBRE_PERSONA: string;
-    APELL_PAT: string;
-    APELL_MAT: string;
-    DNI: string;
-    CORREO: string;
-    TELEFONO: number;
-    FECHA_NAC: string;
-    SEXO: string;
-
+    id_persona: number;
+    nombre_persona: string;
+    apell_pat: string;
+    apell_mat: string;
+    dni: string;
+    correo: string;
+    telefono: number;
+    fecha_nac: string;
+    sexo: string;
 }
